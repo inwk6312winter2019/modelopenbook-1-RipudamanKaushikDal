@@ -26,4 +26,14 @@ file=open('running-config.cfg')
 values=print_val(file)
 
 dic=dict(zip(names,values))
-print(dic)
+#print(dic)
+
+def replace_val():
+	fout=open('running-config.cfg')
+	for lines in fout:
+		lines=lines.replace('192','10')
+		lines=lines.replace('172','10')
+		lines=lines.replace('255.255.255.248','255.0.0.0')
+		lines=lines.replace('255.255.255.0','255.0.0.0')
+		print(lines)
+replace_val()
