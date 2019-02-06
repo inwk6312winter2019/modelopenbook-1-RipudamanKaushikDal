@@ -37,3 +37,21 @@ def replace_val():
 		lines=lines.replace('255.255.255.0','255.0.0.0')
 		print(lines)
 replace_val()
+
+def new_list():
+	list1=[]
+	list2=[]
+	list3=[]
+	fout=open('running-config.cfg')
+	for line in fout:
+		if access-list in line:
+			if transit_access_in in  line:
+				list1=list1.append(line)
+			elif fw-management_access_in in line:
+				list2=list2.append(line)
+			else:
+				list3=list3.append(line)
+	print(list1)
+	print(list2)
+	print(list3)
+new_list()
